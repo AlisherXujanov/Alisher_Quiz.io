@@ -1,10 +1,10 @@
 from flask import Flask, render_template
-import random, copy
+import random
 
 app = Flask(__name__)
 
 original_questions = {
- #Format is 'question':[options]
+   #Format is 'question':[options]
    "There are 17-floors in apartmant. On the first floor there are only 4 people living, \
    but the more you gohigher, the more the number of people is increasing in double. \
    So, which number of the elevator is being pushed the most each day?": ['First floor', 'Last floor', 'Middle floor', 'All floors are equal'],
@@ -54,29 +54,13 @@ original_questions = {
    Who am I ???": ['Future', 'Earth', 'Sun', 'Air']
 }
 
-
-
-questions = copy.deepcopy(original_questions)
-
-def shuffle(n):
-   """
-   This function is for shuffling 
-   the dictionary elements.
-   """
-   selected_keys = []
-   i = 0
-   while i > len(n):
-      current_selection = random.choice(n.keys())
-      if current_selection not in selected_keys:
-         i += 1
-   return selected_keys
-
 @app.route('/')
-def quiz():
- questions_shuffled = shuffle(questions)
- for i in questions.keys():
-  random.shuffle(questions[i])
- return render_template('main.html', q = questions_shuffled, o = questions)
+def main():
+   for key, value in original_questions.items():
+      random.shuffle(value)
+   quest = original_questions
+   return render_template('main.html', quest = quest)
+
 
 
 if __name__=='__main__':

@@ -1,13 +1,21 @@
-<h1>Level-1 Eurika-Quiz</h1>
-
-<form action="/quiz" method="POST">
-   <ol>
-      {% for i in q %}
-         <li>Where is <u>{{ i }}</u> located? </li>
-         {% for j in o[i] %}
-            <input type="radio" value="{{ j }}" name="{{ i }}" />{{j}}
-         {% endfor %}
-      {% endfor %}
-   </ol>
-   <input type="submit" value="Submit" />
-</form>
+{% extends 'layout.html' %}
+{% block head %} {% endblock %}
+{% block body %}
+   <div class="lv-1">
+      <h1 style="color: green; text-align: center;">WorldWide Quiz Level-1</h1>
+      <form action='/quiz' method='POST'>
+         <ol style="color: black; font-size: 20px;">
+            {% for key, value in quest.items() %}
+               <li style="font-style: italic; font-weight: bold;">-{{key}}</li>
+               {% for i in value %}
+                  <ul>
+                     <li>{{i}}</li>
+                  </ul>
+               {% endfor %}
+               <hr>
+            {% endfor %}
+         </ol>
+         <input type="submit" value="submit" />
+      </form>
+   </div>
+{% endblock %}
