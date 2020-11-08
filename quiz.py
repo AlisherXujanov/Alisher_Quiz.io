@@ -1,5 +1,6 @@
-from flask import Flask, render_template
-import random
+from flask import Flask, render_template, url_for, request
+import random, copy
+
 
 app = Flask(__name__)
 
@@ -54,13 +55,36 @@ original_questions = {
    Who am I ???": ['Future', 'Earth', 'Sun', 'Air']
 }
 
+
+# Shuffling throughout dictionary
+keys =  list(original_questions.keys())
+random.shuffle(keys)
+Shuffled_original_questions = dict()
+
+
+
+
 @app.route('/')
 def main():
-   for key, value in original_questions.items():
-      random.shuffle(value)
-   quest = original_questions
-   return render_template('main.html', quest = quest)
 
+   for key in keys:
+      Shuffled_original_questions.update({key:original_questions[key]})
+   original_quest = original_questions
+   for key, value in Shuffled_original_questions.items():
+      random.shuffle(value)
+   quest = Shuffled_original_questions
+   return render_template('main.html', quest = quest, o_quest = original_quest)
+
+
+
+
+
+@app.route('/result',methods = ['POST', 'GET'])
+def result():
+   if request.method == 'POST':
+      result = request.form
+      return render_template("result.html",result = result)
+   
 
 
 if __name__=='__main__':
