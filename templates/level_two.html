@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body style="text-align: center;">
-        <h1 style="color: brown">Level-2</h1>
-    
+{% extends 'layout.html' %}
 
+{% block body %}
+
+    <h1>Level-2 Quiz</h1>
+    <div class="audio" style="float: right;">
+      <audio style="background-color: red;" controls="controls" autoplay="autoplay" src="/static/music/carpenters.mp3"></audio> <br>
+      <small style="float: right; color: red; background-color: black;">Music is Mind Booster, and LIFE!</small>
+    </div>
+
+<form action="result_two" method="POST">
     <p>In what part of the body do you find Fibula? <br>
         a) Head <br>
         b) Arms <br>
         c) Legs <br>
         d) Everywhere in the body
+        <p>Answer: <input type = "text" name = "1st" /></p>
     </p>
     <hr>
 
@@ -21,7 +22,8 @@
         a) Crypto Currency <br>
         b) Hot Weather <br>
         c) Nature <br>
-        d) Ice and Cold 
+        d) Ice and Cold <br> 
+        <p>Answer: <input type = "text" name = "2nd" /></p>
     </p>
     <hr>
 
@@ -29,7 +31,8 @@
         a) Jozeph <br>
         b) George <br>
         c) Oliver <br>
-        d) Stephen 
+        d) Stephen <br>
+        <p>Answer: <input type = "text" name = "3rd" /></p>
     </p>
     <hr>
 
@@ -37,7 +40,8 @@
         a) World Of Warcraft <br>
         b) Call of Duty <br>
         c) Darksiders <br>
-        d) Alice in Wonderland 
+        d) Alice in Wonderland <br>
+        <p>Answer: <input type = "text" name = "4th" /></p>
     </p>   
     <hr>
 
@@ -45,7 +49,8 @@
         a) Ag <br>
         b) h2o <br>
         c) Ac <br>
-        d) Al 
+        d) Al <br>
+        <p>Answer: <input type = "text" name = "5th" /></p>
     </p>    
     <hr>
 
@@ -54,7 +59,8 @@
         a) Regensdorf <br>
         b) Zofingen <br>
         c) Geneva <br>
-        d) Bern 
+        d) Bern <br>
+        <p>Answer: <input type = "text" name = "6th" /></p>
     </p>
     <hr>
 
@@ -63,7 +69,8 @@
         a) Mercury <br>
         b) Venus <br>
         c) Earth <br>
-        d) Mars
+        d) Mars <br>
+        <p>Answer: <input type = "text" name = "7th" /></p>
     </p>
     <hr>
 
@@ -72,7 +79,8 @@
         a) Hello <br>
         b) Time <br>
         c) Ruler <br>
-        d) Future
+        d) Future <br>
+        <p>Answer: <input type = "text" name = "8th" /></p>
     </p>
     <hr>
 
@@ -81,7 +89,8 @@
         a) 343 <br>
         b) 49 <br>
         c) 250 <br>
-        d) 7+7+7 
+        d) 7+7+7 <br>
+        <p>Answer: <input type = "text" name = "9th" /></p>
     </p>
     <hr>
 
@@ -90,8 +99,11 @@
         a) 117 <br>
         b) 154 <br>
         c) 300+ <br>
-        d) He did not write any 
+        d) He did not write any <br>
+        <p>Answer: <input type = "text" name = "10th" /></p>
     </P>
-    
-</body>
-</html>
+    <hr>
+    <p style="position: relative; left: 100px; font-size: auto;"><input type="submit" value="Submit" id="submit"> </p>
+</form>
+  
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="home-page">
+    <img src="{{ url_for('static', filename='img1.jpg') }}">
+    <div class="welcome-page">
+    <em class="welcome">
+    Eureka welcomes the use of our website and quizzes in the classroom as a teaching aid or for preparing and testing students.
+    See our education page. Our quizzes may be used as printable quizzes and question sheets by k-12 teachers, parents, and home schoolers. 
+    All questions, answers, and quiz content on this website is copyright </em>
+    </div>  
+    </div>
+    <img style="float: none; border-radius: 50%;" src="{{ url_for('static', filename='img2.jpeg') }}">
+    
+    <small style="float: right;">
+        If You would like, you can find more <a href="https://www.funtrivia.com/playquiz/quiz3593562923528.html">here</a>!
+    </small>
+    
+{% endblock %}

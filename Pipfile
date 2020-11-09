@@ -11,6 +11,7 @@ flask-wtf = "*"
 flask-mail = "*"
 flask-bootstrap = "*"
 playsound = "*"
+email-validator = "*"
 
 [requires]
 python_version = "3.9"

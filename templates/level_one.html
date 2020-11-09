@@ -1,15 +1,23 @@
-{% block body %}
-    <h1>Level-1 Quiz</h1>
+{% extends 'layout.html' %}
 
-<form action="http://localhost:5000/result" method="POST">
+{% block body %}
+
+    <h1>Level-1 Quiz</h1>
+    <div class="audio" style="float: right;">
+      <audio style="background-color: red;" controls="controls" autoplay="autoplay" src="/static/music/furelise.mp3"></audio> <br>
+      <small style="float: right; color: red; background-color: black;">Music is Mind Booster, and LIFE!</small>
+
+   </div>
+
+<form action="result" method="POST">
     <p>There are 17-floors in apartmant. On the first floor there are only 4 people living, 
         but the more you go higher, the more the number of people is increasing in double. 
         So, which number of the elevator is being pushed the most each day? <br>
         a) Last floor <br>
         b) First floor <br>
         c) Middle floor <br>
-        d) All floors are equal   
-    </p>
+        d) All floors are equal   <p>Answer: <input type = "text" name = "1st" /></p>
+    </p> 
     <hr>
 
     <p>In the lake there are 30 hungry Sharks that eat each other constantly. 
@@ -18,7 +26,8 @@
         a) 9 <br>
         b) 7 <br>
         c) 2 <br>
-        d) 0
+        d) 0            
+        <p>Answer: <input type = "text" name = "2nd" /></p>
     </p>
     <hr>
     <p>George, Andrey and Sasha - friends. George is real brother of Andrey. 
@@ -27,6 +36,7 @@
         b) He hates them both <br>
         c) She is girl <br>
         d) It was a trick 
+        <p>Answer: <input type = "text" name = "3rd" /></p>
     </p>
     <hr>
 
@@ -38,6 +48,7 @@
         b) 68 <br>
         c) 88 <br>
         d) 10
+        <p>Answer: <input type = "text" name = "5th" /></p>
     </p>
     <hr>
 
@@ -48,6 +59,7 @@
         b) 3 <br>
         c) 4 <br>
         d) 5 
+        <p>Answer: <input type = "text" name = "6th" /></p>
     </p>
     <hr>
 
@@ -56,6 +68,7 @@
         b) Cotton <br>
         c) None <br>
         d) Equal 
+        <p>Answer: <input type = "text" name = "7th" /></p>
     </p>
     <hr>
 
@@ -65,6 +78,7 @@
         b) 5 <br>
         c) 10 <br>
         d) 30 
+        <p>Answer: <input type = "text" name = "8th" /></p>
     </p>
     <hr>
 
@@ -79,6 +93,9 @@
         b) I want to jump from mountains to rocky shore <br>
         c) I am sorry <br>
         d) I do not want to die 
+
+        <p>Answer: <input type = "text" name = "9th" /></p>
+
     </p>
     <hr>
 
@@ -89,6 +106,8 @@
         B) 12 <br>
         c) 3 <br>
         d) 4 
+        <p>Answer: <input type = "text" name = "10th" /></p>
+
     </p> 
     <hr>
 
@@ -99,6 +118,8 @@
         b) He ran too fast <br>
         c) He met a friend <br>
         d) He had't any 
+        <p>Answer: <input type = "text" name = "11th" /></p>
+
     </p>   
     <hr>
 
@@ -108,6 +129,8 @@
         b) 3 <br>
         c) 4 <br>
         d) 5
+        <p>Answer: <input type = "text" name = "12th" /></p>
+
     </p>
     <hr>
 
@@ -118,6 +141,8 @@
         b) Age <br>
         c) Ability <br>
         d) Name 
+        <p>Answer: <input type = "text" name = "13th" /></p>
+
     </p>
     <hr>
 
@@ -127,10 +152,14 @@
         b) Sun <br>
         c) Air <br>
         d) Future 
+        <p>Answer: <input type = "text" name = "14th" /></p>
+
     </p>
     <hr>
     
-    <p><input type="submit" value="Submit" id="submit"> </p>
+    <p style="position: relative; left: 100px; font-size: auto;"><input type="submit" value="Submit" id="submit"> </p>
 </form>
 
 {% endblock %}
+
+
