@@ -1,5 +1,5 @@
-from flask import Flask, render_template, url_for, request, redirect, flash
-
+from flask import Flask, render_template, request
+from forms import AnswerFormat
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
@@ -11,26 +11,28 @@ def home():
 
 @app.route('/level_one')
 def level_one():
-   return render_template('level_one.html', title="1-level")
+   form = AnswerFormat()
+   return render_template('level_one.html', title="1-level", form=form)
 
 
 @app.route('/level_two')
 def level_two():
-   return render_template('level_two.html', title="2-level")
+   form = AnswerFormat()
+   return render_template('level_two.html', title="2-level", form=form)
 
 
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
    if request.method == 'POST':
       result = request.form
-      return render_template("result.html", result = result, title="1-st Level")
+      return render_template("result.html", result = result, title="Resulf 1")
 
 
 @app.route('/result_two',methods = ['POST', 'GET'])
 def result_two():
    if request.method == 'POST':
       result = request.form
-      return render_template("result_two.html", result = result, title="2-nd Level")
+      return render_template("result_two.html", result = result, title="Result 2")
 
 
 

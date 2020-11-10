@@ -16,8 +16,23 @@
         a) Last floor <br>
         b) First floor <br>
         c) Middle floor <br>
-        d) All floors are equal   <p>Answer: <input type = "text" name = "1st" /></p>
-    </p> 
+        d) All floors are equal
+    </p>  
+
+        {{ form.First.label(class='form-control-label') }}
+        <div class="form-group">
+            {% if form.First.errors %}
+                {{ form.First }}
+                <div class="">
+                    {% for error in form.First.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% else %}    
+                {{ form.First }}
+            {% endif %}
+        </div>
+    
     <hr>
 
     <p>In the lake there are 30 hungry Sharks that eat each other constantly. 
@@ -27,8 +42,22 @@
         b) 7 <br>
         c) 2 <br>
         d) 0            
-        <p>Answer: <input type = "text" name = "2nd" /></p>
     </p>
+    
+    {{ form.Second.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Second.errors %}
+            {{ form.Second }}
+            <div class="">
+                {% for error in form.Second.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Second }}
+        {% endif %}
+    </div>
+
     <hr>
     <p>George, Andrey and Sasha - friends. George is real brother of Andrey. 
         Andrey is real brother of Sasha. But is not their brother. Why? <br>
@@ -36,8 +65,22 @@
         b) He hates them both <br>
         c) She is girl <br>
         d) It was a trick 
-        <p>Answer: <input type = "text" name = "3rd" /></p>
     </p>
+
+    {{ form.Third.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Third.errors %}
+            {{ form.Third }}
+            <div class="">
+                {% for error in form.Third.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Third }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>100 students learned English and German languages simultoneously. 
@@ -48,28 +91,70 @@
         b) 68 <br>
         c) 88 <br>
         d) 10
-        <p>Answer: <input type = "text" name = "5th" /></p>
     </p>
+
+    {{ form.Fourth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Fourth.errors %}
+            {{ form.Fourth }}
+            <div class="">
+                {% for error in form.Fourth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Fourth }}
+        {% endif %}
+    </div>
+
     <hr>
 
 
     <p>There are a group of Caterpillars going on. One is ahead, two are behind. 
-        One is behind, two are ahead and one is between. How many of them in a group? <br>
+        One is behind, two are ahead and First is between. How many of them in a group? <br>
         a) 2 <br>
         b) 3 <br>
         c) 4 <br>
         d) 5 
-        <p>Answer: <input type = "text" name = "6th" /></p>
     </p>
+
+    {{ form.Fifth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Fifth.errors %}
+            {{ form.Fifth }}
+            <div class="">
+                {% for error in form.Fifth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Fifth }}
+        {% endif %}
+    </div>
+
     <hr>
 
-    <p>Which one is heavier, 1kg of Cotton or 1kg of Iron? <br>
+    <p>Which First is heavier, 1kg of Cotton or 1kg of Iron? <br>
         a) Iron <br>
         b) Cotton <br>
         c) None <br>
         d) Equal 
-        <p>Answer: <input type = "text" name = "7th" /></p>
     </p>
+
+    {{ form.Sixth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Sixth.errors %}
+            {{ form.Sixth }}
+            <div class="">
+                {% for error in form.Sixth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Sixth }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>Three huge Chickens can eat three fattest Caterpillars in three minutes. 
@@ -78,8 +163,22 @@
         b) 5 <br>
         c) 10 <br>
         d) 30 
-        <p>Answer: <input type = "text" name = "8th" /></p>
     </p>
+
+    {{ form.Seventh.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Seventh.errors %}
+            {{ form.Seventh }}
+            <div class="">
+                {% for error in form.Seventh.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Seventh }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>The treasure hunter made his way to an uninhabited island in the Caribbean using an old map. 
@@ -94,9 +193,22 @@
         c) I am sorry <br>
         d) I do not want to die 
 
-        <p>Answer: <input type = "text" name = "9th" /></p>
-
     </p>
+
+    {{ form.Eighth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Eighth.errors %}
+            {{ form.Eighth }}
+            <div class="">
+                {% for error in form.Eighth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Eighth }}
+        {% endif %}
+    </div>
+
     <hr>
 
 
@@ -106,9 +218,22 @@
         B) 12 <br>
         c) 3 <br>
         d) 4 
-        <p>Answer: <input type = "text" name = "10th" /></p>
-
     </p> 
+
+    {{ form.Ninth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Ninth.errors %}
+            {{ form.Ninth }}
+            <div class="">
+                {% for error in form.Ninth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Ninth }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>Alex's grandfather was going home on foot on a sunny and beautiful day. 
@@ -118,9 +243,22 @@
         b) He ran too fast <br>
         c) He met a friend <br>
         d) He had't any 
-        <p>Answer: <input type = "text" name = "11th" /></p>
-
     </p>   
+
+    {{ form.Tenth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Tenth.errors %}
+            {{ form.Tenth }}
+            <div class="">
+                {% for error in form.Tenth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Tenth }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>Two children can create two bicycles in two hours. 
@@ -129,9 +267,22 @@
         b) 3 <br>
         c) 4 <br>
         d) 5
-        <p>Answer: <input type = "text" name = "12th" /></p>
-
     </p>
+
+    {{ form.Eleventh.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Eleventh.errors %}
+            {{ form.Eleventh }}
+            <div class="">
+                {% for error in form.Eleventh.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Eleventh }}
+        {% endif %}
+    </div>
+
     <hr>
 
 
@@ -141,9 +292,22 @@
         b) Age <br>
         c) Ability <br>
         d) Name 
-        <p>Answer: <input type = "text" name = "13th" /></p>
-
     </p>
+
+    {{ form.Twelfth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Twelfth.errors %}
+            {{ form.Twelfth }}
+            <div class="">
+                {% for error in form.Twelfth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Twelfth }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>I never was, am always to be. Noone ever saw me, nor ever will, 
@@ -152,9 +316,22 @@
         b) Sun <br>
         c) Air <br>
         d) Future 
-        <p>Answer: <input type = "text" name = "14th" /></p>
-
     </p>
+
+    {{ form.Thirteenth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Thirteenth.errors %}
+            {{ form.Thirteenth }}
+            <div class="">
+                {% for error in form.Thirteenth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Thirteenth }}
+        {% endif %}
+    </div>
+
     <hr>
     
     <p style="position: relative; left: 100px; font-size: auto;"><input type="submit" value="Submit" id="submit"> </p>

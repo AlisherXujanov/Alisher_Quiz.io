@@ -14,8 +14,22 @@
         b) Arms <br>
         c) Legs <br>
         d) Everywhere in the body
-        <p>Answer: <input type = "text" name = "1st" /></p>
     </p>
+
+    {{ form.First.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.First.errors %}
+            {{ form.First }}
+            <div class="">
+                {% for error in form.First.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.First }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>If you have Crypthofhobia, what are you afraid of? <br>
@@ -23,8 +37,22 @@
         b) Hot Weather <br>
         c) Nature <br>
         d) Ice and Cold <br> 
-        <p>Answer: <input type = "text" name = "2nd" /></p>
     </p>
+
+    {{ form.Second.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Second.errors %}
+            {{ form.Second }}
+            <div class="">
+                {% for error in form.Second.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Second }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>According to ONS, What was the most popular boy's name in the UK in 2018? <br>
@@ -32,8 +60,22 @@
         b) George <br>
         c) Oliver <br>
         d) Stephen <br>
-        <p>Answer: <input type = "text" name = "3rd" /></p>
     </p>
+
+    {{ form.Third.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Third.errors %}
+            {{ form.Third }}
+            <div class="">
+                {% for error in form.Third.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Third }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>Which popular video game franchise has released games with the subtitles -World At War- and -Black Ops- ? <br>
@@ -41,8 +83,22 @@
         b) Call of Duty <br>
         c) Darksiders <br>
         d) Alice in Wonderland <br>
-        <p>Answer: <input type = "text" name = "4th" /></p>
     </p>   
+
+    {{ form.Fourth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Fourth.errors %}
+            {{ form.Fourth }}
+            <div class="">
+                {% for error in form.Fourth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Fourth }}
+        {% endif %}
+    </div>
+
     <hr>
 
     <p>What is chemical symbol for Silver? <br>
@@ -50,8 +106,22 @@
         b) h2o <br>
         c) Ac <br>
         d) Al <br>
-        <p>Answer: <input type = "text" name = "5th" /></p>
-    </p>    
+    </p>   
+    
+    {{ form.Fifth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Fifth.errors %}
+            {{ form.Fifth }}
+            <div class="">
+                {% for error in form.Fifth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Fifth }}
+        {% endif %}
+    </div>
+
     <hr>
 
 
@@ -60,8 +130,22 @@
         b) Zofingen <br>
         c) Geneva <br>
         d) Bern <br>
-        <p>Answer: <input type = "text" name = "6th" /></p>
     </p>
+
+    {{ form.Sixth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Sixth.errors %}
+            {{ form.Sixth }}
+            <div class="">
+                {% for error in form.Sixth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Sixth }}
+        {% endif %}
+    </div>
+
     <hr>
 
 
@@ -70,8 +154,22 @@
         b) Venus <br>
         c) Earth <br>
         d) Mars <br>
-        <p>Answer: <input type = "text" name = "7th" /></p>
     </p>
+
+    {{ form.Seventh.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Seventh.errors %}
+            {{ form.Seventh }}
+            <div class="">
+                {% for error in form.Seventh.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Seventh }}
+        {% endif %}
+    </div>
+
     <hr>
 
 
@@ -80,8 +178,22 @@
         b) Time <br>
         c) Ruler <br>
         d) Future <br>
-        <p>Answer: <input type = "text" name = "8th" /></p>
     </p>
+
+    {{ form.Eighth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Eighth.errors %}
+            {{ form.Eighth }}
+            <div class="">
+                {% for error in form.Eighth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Eighth }}
+        {% endif %}
+    </div>
+
     <hr>
 
 
@@ -90,8 +202,22 @@
         b) 49 <br>
         c) 250 <br>
         d) 7+7+7 <br>
-        <p>Answer: <input type = "text" name = "9th" /></p>
     </p>
+
+    {{ form.Ninth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Ninth.errors %}
+            {{ form.Ninth }}
+            <div class="">
+                {% for error in form.Ninth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Ninth }}
+        {% endif %}
+    </div>
+
     <hr>
 
 
@@ -100,8 +226,22 @@
         b) 154 <br>
         c) 300+ <br>
         d) He did not write any <br>
-        <p>Answer: <input type = "text" name = "10th" /></p>
     </P>
+
+    {{ form.Tenth.label(class='form-control-label') }}
+    <div class="form-group">
+        {% if form.Tenth.errors %}
+            {{ form.Tenth }}
+            <div class="">
+                {% for error in form.Tenth.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}    
+            {{ form.Tenth }}
+        {% endif %}
+    </div>
+
     <hr>
     <p style="position: relative; left: 100px; font-size: auto;"><input type="submit" value="Submit" id="submit"> </p>
 </form>
