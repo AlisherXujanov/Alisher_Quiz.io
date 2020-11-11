@@ -118,6 +118,7 @@ img {
 
 .home-page {
   background: linear-gradient(135deg, green, yellow, indigo);
+  border-radius: 10px;
 }
 
 .answer-page {
@@ -135,4 +136,14 @@ img {
 .user-answers {
   background: linear-gradient(90deg, yellow, green);
   
+}
+
+.get-rise-level {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: linear-gradient(45deg, green, red);
+  border-radius: 20px;
+}
+
+a:hover {
+  color: green;
 }
